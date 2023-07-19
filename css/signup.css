@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --header-color: rgb(185, 243, 252);
+  --header2-color: rgb(227, 251, 255);
+  --abovfoot-color: rgb(172, 239, 249);
+  --button-color: white;
+  --body-color: white;
+  --text-color: black;
+  --details-color: rgb(63, 63, 63);
+  --link-color: rgb(49, 13, 83);
+  --footer-color: rgb(42, 9, 73);
+  --footerlink-color: #e91e63;
+  --icon-color:rgba(255, 255, 255, 0.2);
+}
+.dark-mode {
+  --header-color: rgb(31, 31, 31);
+  --header2-color: rgb(46, 45, 45);
+  --abovfoot-color:rgb(23, 23, 23);
+  --button-color: black;
+  --body-color: black;
+  --text-color: white;
+  --details-color: rgb(214, 214, 214);
+  --link-color: rgb(219, 250, 255);
+  --footer-color: rgb(31, 31, 31);
+  --footerlink-color: #e91e63;
+  --maincontainer-color: black;
+  --icon-color:rgba(255, 255, 255, 0.685);
+  transition:  0.7s ease;
+}
+#icon ,#topicon {
+  z-index: 10;
+  width: 40px;
+  padding: 2px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px 1px rgb(90, 89, 89) !important;
+  background-color: var(--icon-color);
+}
+#icon:hover,#topicon:hover {
+  background-color: white;
+  color: var(--body-color);
+}
+#topicon {
+  position: fixed;
+  bottom: 35px !important;
+  right: 10px !important;
+  padding: 2px !important;
+}
+.header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  width: 100%;
+  margin: 0 0 auto 0;
+  z-index: 1024 !important;
+  height: 60px;
+  background-color: var(--header-color);
+  opacity: 1;
+  transition: position 0.4s, opacity 0.2s !important;
+}
+body {
+  line-height: 1.5;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--body-color);
+}
+.buttons {
+  margin: 0px;
+  width: 400px;
+  height: 50px;
+  float: right;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.header .buttons li,
+.middle .head li {
+  width: 300px;
+  font-size: 17px;
+  display: inline;
+  margin: 10px;
+  color: rgb(5, 3, 70);
+}
+.header .buttons li a,
+.middle .head li a,
+p.log a {
+  padding: 5px;
+  width: 100px;
+  border-radius: 7px;
+  text-decoration: none;
+  color: var(--link-color);
+  transition: all 0.3s ease;
+}
+.header .buttons a:hover,
+.middle .head a:hover,
+p.log a:hover {
+  background-color: var(--link-color);
+  width: 200px;
+  color: var(--button-color);
+}
+.maincontainer {
+  background-color: var(--maincontainer-color);
+  width: 100%;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.login-form {
+  position: relative;
+  width: auto;
+  background: var(--header2-color);
+  z-index: 0;
+  padding: 40px 0;
+}
+.login-form h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+.login-form .main {
+  position: relative;
+  display: flex;
+  margin: 0px 0;
+  box-shadow: 0 0 30px #333;
+  border-radius: 35px;
+  max-width: 100%;
+}
+.content {
+  flex-basis: 50%;
+  padding: 10px 3em;
+  background: var(--header-color);
+  color: var(--text-color);
+  box-shadow: 2px 9px 49px -17px rgb(0, 0, 0, 0.1);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.form-img {
+  flex-basis: 50%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  align-items: center;
+  display: grid;
+}
+.form-img img {
+  max-width: 100%;
+  max-height: 100%;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+select {
+  width: 100%;
+  height: 40px;
+  padding: 0px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+p {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 25px;
+  opacity: 1;
+}
+p.hostlog {
+  font-size: 25px;
+  color: var(--text-color);
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.btn,
+button,
+input {
+  border-radius: 5px;
+}
+.btn:hover,
+button:hover {
+  transition: 0.5s ease;
+}
+.login-form form {
+  margin: 0px 0px 15px 0px;
+}
+.login-form input {
+  outline: none;
+  margin-bottom: 15px;
+  font-stretch: 16px;
+  text-align: left;
+  padding: 10px 10px;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+}
+.login-form button {
+  font-size: 18px;
+  color: var(--footer-color);
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 0px 10px;
+  font-weight: 600;
+  padding: 10px 15px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  /*transition: 0.3s ease;*/
+}
+.login-form .submit:hover{
+  cursor:pointer;
+}
+.login-form button:hover {
+  background: var(--link-color);
+  color: var(--button-color);
+}
+p.studentlog,
+p.studentlog a {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 0;
+  font-size: 16px;
+  text-decoration: none;
+}
+p.studentlog a:hover {
+  text-decoration: underline;
+}
+.abovfoot {
+  background-color: var(--abovfoot-color);
+  text-decoration: var(--text-color);
+  max-height: 200px;
+  text-align: center;
+}
+p.signup,
+p.signup a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+p.signup a{
+  color: blue !important;
+}
+p.signup a:hover {
+  text-decoration: underline;
+}
+.footer {
+  background-color: var(--footer-color);
+  padding: 70px 0;
+}
+.footercol ul {
+  list-style: none;
+}
+.footercol {
+  width: 25%;
+  padding: 0 11px;
+  margin-left: 90px;
+}
+.container1 {
+  max-width: 1170px;
+}
+.footer .container1 .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footercol h4 {
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.footercol h4::before {
+  content: '';
+  position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    width: 30px;
+  background-color: var(--footerlink-color) !important;
+  height: 2px !important;
+  width: 100px !important;
+}
+.footercol ul li,
+.footercol span {
+  color: rgb(229, 247, 250);
+}
+.footercol ul li:not(:last-child) {
+  margin-bottom: 3px;
+}
+.footercol .social a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: rgb(185, 243, 252);
+  transition: all 0.5s ease;
+}
+.footercol .social a:hover {
+  color: rgb(202, 202, 202);
+  background-color: var(--footerlink-color);
+}
+@media (max-width: 584px) {
+  .maincontainer {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .form-img {
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .container form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 767px) {
+  .footercol {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footercol {
+    width: 100%;
+  }
+}
+
+@media (max-width: 730px) {
+  .login-form .main {
+    flex-direction: column;
+  }
+  .login-form form {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .form-img {
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    order: 2;
+    display: none;
+  }
+  .content {
+    order: 1;
+    border-radius: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+}
+
+/* changed from hear */
+.form-control {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: black;
+}
+
+.form-control .success input {
+  border: 2px solid;
+  border-color: #09c372;
+}
+
+.form-control.error input {
+  border: 2px solid;
+  border-color: #ff3860;
+}
+
+.form-control .error {
+  color: #ff3860;
+  font-size: 10px;
+  height: 13px;
+}
